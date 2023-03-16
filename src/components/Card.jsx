@@ -1,25 +1,46 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { createPortal } from "react-dom";
+import { Context } from "../context/Provider";
 import { Icon } from "./Icon";
+import { ModalContainer } from "./ModalContainer";
+import { Tooltip } from "./Tooltip";
 
 export const Card = ({ product }) => {
+  const [_, actions] = useContext(Context);
+
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   return (
     <div className='text-sm'>
       <div className='mb-2 relative'>
-        <div className='absolute w-full'>
-          <div className='flex justify-end gap-x-1 p-1'>
-            <button
-              className='p-1 bg-slate-900/50 text-white rounded-sm'
-              title='edit'
-            >
-              <Icon name='pencil' />
-            </button>
-            <button
-              className='p-1 bg-slate-900/50 text-white rounded-sm'
-              title='delete'
-            >
-              <Icon name='trash-can' />
-            </button>
-          </div>
+        <div className='tooltip-container absolute right-0 p-1'>
+          <button
+            className='p-1 bg-slate-700/50 text-white rounded-sm mr-1'
+            title='edit'
+            onClick={() => setShowEditModal(!showEditModal)}
+          >
+            <Icon name='pencil' />
+          </button>
+          {showEditModal &&
+            createPortal(
+              <ModalContainer handleOnClose={() => setShowEditModal(false)}>
+                edit modal
+              </ModalContainer>,
+              document.body
+            )}
+          <button
+            className='p-1 bg-slate-700/50 text-white rounded-sm'
+            title='delete'
+            onClick={() => setShowDeleteModal(!showDeleteModal)}
+          >
+            <Icon name='trash-can' />
+          </button>
+          {showDeleteModal && (
+            <Tooltip
+              handleCancel={() => setShowDeleteModal(false)}
+              handleDelete={() => actions.deleteProduct(product.id)}
+            />
+          )}
         </div>
         <img
           src={product.imageSrc}
@@ -37,7 +58,7 @@ export const Card = ({ product }) => {
           <span className='peer inline-block'>
             <Icon name='info' className={"cursor-pointer w-[15px] h-[15px]"} />
           </span>
-          <div className='opacity-0 peer-hover:opacity-100 absolute z-10 left-0 duration-200 backdrop-blur-md peer-hover:delay-300 invisible peer-hover:visible text-gray-200 bg-stone-900/60 p-2 rounded-sm font-light'>
+          <div className='opacity-0 peer-hover:opacity-100 absolute z-10 left-0 duration-200 backdrop-blur-md peer-hover:delay-300 invisible peer-hover:visible text-gray-100 bg-stone-900/60 p-2 rounded-sm font-light'>
             {product.description}
           </div>
         </div>
