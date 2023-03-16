@@ -3,8 +3,8 @@
     {
       "id": 3,
       "name": "Made in USA 990v6",
-      "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
       "type": "Men's Lifestyle",
+      "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
       "price": 199.99,
       "category": "shoes",
       "imageSrc": "https://nb.scene7.com/is/image/NB/m990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
@@ -12,8 +12,8 @@
     {
       "id": 5,
       "name": "Sweetsalt Dress",
-      "description": "Nothing beats pockets-except maybe pockets on a darling dress. With its comfortable straight-skirt design, this dress lets you keep your personal items with you while keeping you looking fashionable and fabulous.",
       "type": "Front pocket dress",
+      "description": "Nothing beats pockets-except maybe pockets on a darling dress. With its comfortable straight-skirt design, this dress lets you keep your personal items with you while keeping you looking fashionable and fabulous.",
       "price": 41.99,
       "category": "dress",
       "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1361988_P_Short_Sleeve_Front_Pockets_Dress_Burgundy-165324.jpg"

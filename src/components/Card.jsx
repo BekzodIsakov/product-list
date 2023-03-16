@@ -2,8 +2,10 @@ import React, { useContext, useState } from "react";
 import { createPortal } from "react-dom";
 import { Context } from "../context/Provider";
 import { Icon } from "./Icon";
+import { Input } from "./Input";
 import { ModalContainer } from "./ModalContainer";
 import { Tooltip } from "./Tooltip";
+import { Form } from "./Form";
 
 export const Card = ({ product }) => {
   const [_, actions] = useContext(Context);
@@ -24,7 +26,7 @@ export const Card = ({ product }) => {
           {showEditModal &&
             createPortal(
               <ModalContainer handleOnClose={() => setShowEditModal(false)}>
-                edit modal
+                <Form />
               </ModalContainer>,
               document.body
             )}

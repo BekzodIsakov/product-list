@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { ProductList } from "./components";
+import { Button } from "./components/Button";
 import { Context } from "./context/Provider";
 
 function App() {
@@ -12,16 +13,16 @@ function App() {
 
   return (
     <div className='font-lato'>
-      <main className='max-w-5xl mx-auto my-4 px-4'>
-        <div className='flex justify-between'>
-          <h2>Product list</h2>
+      <div className='max-w-5xl mx-auto my-4 px-4'>
+        <header className='flex justify-end items-center mb-6 border-b pb-1.5'>
           <div>
-            Filter by category: <input type='select' />
+            <label htmlFor='search'>Search</label>
+            <input type='text' />
           </div>
-        </div>
+        </header>
 
         <ProductList />
-      </main>
+      </div>
     </div>
   );
 }
