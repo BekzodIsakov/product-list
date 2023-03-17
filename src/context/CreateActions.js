@@ -29,14 +29,40 @@ export const createActions = (dispatch) => {
         console.error(err);
       }
     },
-    addProduct: (name, price, category, imageSrc) => {
-      dispatch({
-        type: "add",
-        name,
-        price,
-        category,
-        imageSrc,
-      });
+    createProduct: async (product) => {
+      console.log(product);
+      try {
+        const response = await fetch(`${URL}/products`, {
+          headers: { "Content-Type": "application/json" },
+          method: "POST",
+          body: JSON.stringify(product),
+        });
+        if (response.ok) {
+          dispatch({
+            type: "add",
+            product,
+          });
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    },
+    updateProduct: async (product) => {
+      try {
+        const response = await fetch(`${URL}/products/${product.id}`, {
+          headers: { "Content-Type": "application/json" },
+          method: "PUT",
+          body: JSON.stringify(product),
+        });
+        if (response.ok) {
+          dispatch({
+            type: "edit",
+            product,
+          });
+        }
+      } catch (err) {
+        console.error(err);
+      }
     },
   };
 };

@@ -1,17 +1,21 @@
-import React, { useContext, useState } from "react";
-import { createPortal } from "react-dom";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../context/Provider";
 import { Icon } from "./Icon";
-import { Input } from "./Input";
-import { ModalContainer } from "./ModalContainer";
+import { Modal } from "./Modal";
 import { Tooltip } from "./Tooltip";
 import { Form } from "./Form";
+import { AnimatePresence } from "framer-motion";
 
 export const Card = ({ product }) => {
-  const [_, actions] = useContext(Context);
+  const [state, actions] = useContext(Context);
 
-  const [showEditModal, setShowEditModal] = useState(false);
+  // close modal after product editing
+  useEffect(() => {
+    setShowEditModal(false);
+  }, [state]);
+
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
   return (
     <div className='text-sm'>
       <div className='mb-2 relative'>
@@ -19,17 +23,17 @@ export const Card = ({ product }) => {
           <button
             className='p-1 bg-slate-700/50 text-white rounded-sm mr-1'
             title='edit'
-            onClick={() => setShowEditModal(!showEditModal)}
+            onClick={() => setShowEditModal(true)}
           >
             <Icon name='pencil' />
           </button>
-          {showEditModal &&
-            createPortal(
-              <ModalContainer handleOnClose={() => setShowEditModal(false)}>
-                <Form />
-              </ModalContainer>,
-              document.body
+          <AnimatePresence>
+            {showEditModal && (
+              <Modal handleOnClose={() => setShowEditModal(false)}>
+                <Form product={product} />
+              </Modal>
             )}
+          </AnimatePresence>
           <button
             className='p-1 bg-slate-700/50 text-white rounded-sm'
             title='delete'

@@ -5,7 +5,7 @@ export const Input = ({ className = "", ...rest }) => {
     <div>
       <input
         {...rest}
-        className={` w-full rounded border bg-transparent px-2 py-1 ${className} placeholder:font-light`}
+        className={` ${className} w-full rounded border bg-transparent px-2 py-1 placeholder:font-light font-light`}
       />
     </div>
   );

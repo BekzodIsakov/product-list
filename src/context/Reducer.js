@@ -1,7 +1,7 @@
 export const reducer = (state, action) => {
   switch (action.type) {
     case "fetchProducts": {
-      return { products: [...action.products] };
+      return { ...state, products: [...action.products] };
     }
     case "delete": {
       const { id } = action;
@@ -10,39 +10,36 @@ export const reducer = (state, action) => {
       );
 
       return {
+        ...state,
         products: filteredProducts,
       };
     }
 
     case "add": {
-      const { name, description, price, category, imageSrc } = action;
-      return [
+      return {
         ...state,
-        {
-          id: state.length,
-          name,
-          description,
-          price,
-          category,
-          imageSrc,
-        },
-      ];
+        products: [...state.products, action.product],
+      };
     }
-    case "update": {
-      const { id, name, description, price, category, imageSrc } = action;
-      return [
+
+    case "edit": {
+      const editedProducts = state.products.map((product) => {
+        if (product.id === action.product.id) {
+          product = {
+            ...action.product,
+          };
+        }
+
+        return product;
+      });
+
+      return {
         ...state,
-        {
-          id: state.length,
-          name,
-          description,
-          price,
-          category,
-          imageSrc,
-        },
-      ];
+        products: editedProducts,
+      };
     }
+
     default:
-      break;
+      return state;
   }
 };
