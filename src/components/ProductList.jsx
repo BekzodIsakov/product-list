@@ -24,7 +24,7 @@ export const ProductList = () => {
 
   // console.log({ productItems });
 
-  const ITEMS_PER_PAGE = 2;
+  const ITEMS_PER_PAGE = 16;
   // const endOffset = itemOffset + ITEMS_PER_PAGE;
   // const currentItems = productItems.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(state.totalCount / ITEMS_PER_PAGE);

@@ -7,7 +7,7 @@ module.exports = {
         lato: ["Lato", "sans-serif"],
       },
       gridTemplateColumns: {
-        "auto-fit": "repeat(auto-fit, minmax(180px, 1fr))",
+        "auto-fit": "repeat(auto-fill, minmax(180px, 1fr))",
       },
     },
   },

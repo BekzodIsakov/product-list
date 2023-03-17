@@ -19,15 +19,6 @@
       "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
     },
     {
-      "id": 3,
-      "name": "Made in USA 990v6",
-      "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
-      "type": "Men's Lifestyle",
-      "price": 199.99,
-      "category": "shoes",
-      "imageSrc": "https://nb.scene7.com/is/image/NB/m990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
-    },
-    {
       "id": 4,
       "name": "FuelCell Propel v4",
       "type": "Men's Running",
@@ -56,21 +47,255 @@
     },
     {
       "id": 7,
-      "name": "Fresh Foam Roav",
-      "type": "Men's Running",
-      "description": "Revolutionizing comfort and style, the New Balance Fresh Foam Roav delivers an unbeatable ride that is just as comfortable around the foot as it is underneath it. We engineered and designed this shoe with an ultra-modern silhouette to keep heads turning, no matter where life takes you.",
-      "price": 84.99,
-      "category": "shoes",
-      "imageSrc": "https://nb.scene7.com/is/image/NB/mroavrb_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
-    },
-    {
-      "id": 8,
       "name": "V Neck Smoking",
       "type": "Waist dress",
       "description": "This smocked-waist dress is both fun and flattering. With a swishy midi-skirt and a flattering v-neck, you willl absolutely want this dress as part of your new wardrobe.",
       "price": 49.99,
       "category": "dress",
       "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/V_Neck_Smocking_Waist_Dress_Orange_Ivory-358924.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Fresh Foam X 1080v12",
+      "type": "Men's Running",
+      "description": "If we only made one running shoe, that shoe would be the 1080. What makes the 1080 unique isn’t just that it’s the best running shoe we make, it’s also the most versatile. The 1080 delivers top-of-the-line performance to every kind of runner, whether you’re training for world-class competition, or catching a rush hour train.",
+      "price": 159.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m108012n_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 9,
+      "name": "Radlee Skirt",
+      "type": "Floral A-line skirt",
+      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
+      "price": 23.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Made in USA 990v6",
+      "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
+      "type": "Men's Lifestyle",
+      "price": 199.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 11,
+      "name": "FuelCell Propel v4",
+      "type": "Men's Running",
+      "description": "New and experienced runners alike will appreciate the underfoot ride and innovative technology packed into the New Balance FuelCell Propel v4. Featuring a thick FuelCell midsole combined with a TPU plate, this running shoe is designed to maximize comfort and traction to help keep you moving at top speeds.",
+      "price": 109.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/mfcprlw4_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 12,
+      "name": "Sweetsalt Dress",
+      "description": "Nothing beats pockets-except maybe pockets on a darling dress. With its comfortable straight-skirt design, this dress lets you keep your personal items with you while keeping you looking fashionable and fabulous.",
+      "type": "Front pocket dress",
+      "price": 41.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1361988_P_Short_Sleeve_Front_Pockets_Dress_Burgundy-165324.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Raglan puff",
+      "type": "Short sleeve dress",
+      "description": "Cotton dresses are perfect for spring, and this lovely cotton dress is exactly what you need for the new season. This dress also has pockets, puffed sleeves, and a drawstring waist.",
+      "price": 56.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1383812_P%20Raglan_Puff_Short_Slv_Dress_Green-166296.jpg"
+    },
+    {
+      "id": 14,
+      "name": "V Neck Smoking",
+      "type": "Waist dress",
+      "description": "This smocked-waist dress is both fun and flattering. With a swishy midi-skirt and a flattering v-neck, you willl absolutely want this dress as part of your new wardrobe.",
+      "price": 49.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/V_Neck_Smocking_Waist_Dress_Orange_Ivory-358924.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Fresh Foam X 1080v12",
+      "type": "Men's Running",
+      "description": "If we only made one running shoe, that shoe would be the 1080. What makes the 1080 unique isn’t just that it’s the best running shoe we make, it’s also the most versatile. The 1080 delivers top-of-the-line performance to every kind of runner, whether you’re training for world-class competition, or catching a rush hour train.",
+      "price": 159.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m108012n_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 16,
+      "name": "Radlee Skirt",
+      "type": "Floral A-line skirt",
+      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
+      "price": 23.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Made in USA 990v6",
+      "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
+      "type": "Men's Lifestyle",
+      "price": 199.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 18,
+      "name": "FuelCell Propel v4",
+      "type": "Men's Running",
+      "description": "New and experienced runners alike will appreciate the underfoot ride and innovative technology packed into the New Balance FuelCell Propel v4. Featuring a thick FuelCell midsole combined with a TPU plate, this running shoe is designed to maximize comfort and traction to help keep you moving at top speeds.",
+      "price": 109.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/mfcprlw4_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 19,
+      "name": "Sweetsalt Dress",
+      "description": "Nothing beats pockets-except maybe pockets on a darling dress. With its comfortable straight-skirt design, this dress lets you keep your personal items with you while keeping you looking fashionable and fabulous.",
+      "type": "Front pocket dress",
+      "price": 41.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1361988_P_Short_Sleeve_Front_Pockets_Dress_Burgundy-165324.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Raglan puff",
+      "type": "Short sleeve dress",
+      "description": "Cotton dresses are perfect for spring, and this lovely cotton dress is exactly what you need for the new season. This dress also has pockets, puffed sleeves, and a drawstring waist.",
+      "price": 56.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1383812_P%20Raglan_Puff_Short_Slv_Dress_Green-166296.jpg"
+    },
+    {
+      "id": 21,
+      "name": "V Neck Smoking",
+      "type": "Waist dress",
+      "description": "This smocked-waist dress is both fun and flattering. With a swishy midi-skirt and a flattering v-neck, you willl absolutely want this dress as part of your new wardrobe.",
+      "price": 49.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/V_Neck_Smocking_Waist_Dress_Orange_Ivory-358924.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Fresh Foam X 1080v12",
+      "type": "Men's Running",
+      "description": "If we only made one running shoe, that shoe would be the 1080. What makes the 1080 unique isn’t just that it’s the best running shoe we make, it’s also the most versatile. The 1080 delivers top-of-the-line performance to every kind of runner, whether you’re training for world-class competition, or catching a rush hour train.",
+      "price": 159.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m108012n_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 23,
+      "name": "Radlee Skirt",
+      "type": "Floral A-line skirt",
+      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
+      "price": 23.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Made in USA 990v6",
+      "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
+      "type": "Men's Lifestyle",
+      "price": 199.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 25,
+      "name": "FuelCell Propel v4",
+      "type": "Men's Running",
+      "description": "New and experienced runners alike will appreciate the underfoot ride and innovative technology packed into the New Balance FuelCell Propel v4. Featuring a thick FuelCell midsole combined with a TPU plate, this running shoe is designed to maximize comfort and traction to help keep you moving at top speeds.",
+      "price": 109.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/mfcprlw4_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 26,
+      "name": "Sweetsalt Dress",
+      "description": "Nothing beats pockets-except maybe pockets on a darling dress. With its comfortable straight-skirt design, this dress lets you keep your personal items with you while keeping you looking fashionable and fabulous.",
+      "type": "Front pocket dress",
+      "price": 41.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1361988_P_Short_Sleeve_Front_Pockets_Dress_Burgundy-165324.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Raglan puff",
+      "type": "Short sleeve dress",
+      "description": "Cotton dresses are perfect for spring, and this lovely cotton dress is exactly what you need for the new season. This dress also has pockets, puffed sleeves, and a drawstring waist.",
+      "price": 56.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1383812_P%20Raglan_Puff_Short_Slv_Dress_Green-166296.jpg"
+    },
+    {
+      "id": 28,
+      "name": "V Neck Smoking",
+      "type": "Waist dress",
+      "description": "This smocked-waist dress is both fun and flattering. With a swishy midi-skirt and a flattering v-neck, you willl absolutely want this dress as part of your new wardrobe.",
+      "price": 49.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/V_Neck_Smocking_Waist_Dress_Orange_Ivory-358924.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Fresh Foam X 1080v12",
+      "type": "Men's Running",
+      "description": "If we only made one running shoe, that shoe would be the 1080. What makes the 1080 unique isn’t just that it’s the best running shoe we make, it’s also the most versatile. The 1080 delivers top-of-the-line performance to every kind of runner, whether you’re training for world-class competition, or catching a rush hour train.",
+      "price": 159.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m108012n_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 30,
+      "name": "Radlee Skirt",
+      "type": "Floral A-line skirt",
+      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
+      "price": 23.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Made in USA 990v6",
+      "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
+      "type": "Men's Lifestyle",
+      "price": 199.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/m990gl6_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 32,
+      "name": "FuelCell Propel v4",
+      "type": "Men's Running",
+      "description": "New and experienced runners alike will appreciate the underfoot ride and innovative technology packed into the New Balance FuelCell Propel v4. Featuring a thick FuelCell midsole combined with a TPU plate, this running shoe is designed to maximize comfort and traction to help keep you moving at top speeds.",
+      "price": 109.99,
+      "category": "shoes",
+      "imageSrc": "https://nb.scene7.com/is/image/NB/mfcprlw4_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": 33,
+      "name": "Sweetsalt Dress",
+      "description": "Nothing beats pockets-except maybe pockets on a darling dress. With its comfortable straight-skirt design, this dress lets you keep your personal items with you while keeping you looking fashionable and fabulous.",
+      "type": "Front pocket dress",
+      "price": 41.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1361988_P_Short_Sleeve_Front_Pockets_Dress_Burgundy-165324.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Raglan puff",
+      "type": "Short sleeve dress",
+      "description": "Cotton dresses are perfect for spring, and this lovely cotton dress is exactly what you need for the new season. This dress also has pockets, puffed sleeves, and a drawstring waist.",
+      "price": 56.99,
+      "category": "dress",
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1383812_P%20Raglan_Puff_Short_Slv_Dress_Green-166296.jpg"
     }
   ]
 }
