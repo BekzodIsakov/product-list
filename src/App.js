@@ -4,11 +4,11 @@ import { Header } from "./components/Header";
 import { Context } from "./context/Provider";
 
 function App() {
-  const [_, actions] = useContext(Context);
+  // const [_, actions] = useContext(Context);
 
-  useEffect(() => {
-    actions.fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   actions.fetchProducts();
+  // }, []);
 
   return (
     <div className='font-lato'>

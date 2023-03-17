@@ -10,6 +10,7 @@
     "framer-motion": "^10.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-paginate": "^8.1.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -18,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --port 2288 --watch db.json"
+    "server": "json-server --watch db.json --port 2288"
   },
   "eslintConfig": {
     "extends": [

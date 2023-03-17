@@ -1,7 +1,11 @@
 export const reducer = (state, action) => {
   switch (action.type) {
     case "fetchProducts": {
-      return { ...state, products: [...action.products] };
+      return {
+        ...state,
+        totalCount: action.totalCount,
+        products: [...action.products],
+      };
     }
     case "delete": {
       const { id } = action;

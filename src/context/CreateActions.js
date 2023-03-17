@@ -1,13 +1,19 @@
-const URL = "http://localhost:2288";
+const BASE_URL = "http://localhost:2288";
 export const createActions = (dispatch) => {
   return {
-    fetchProducts: async () => {
+    fetchProducts: async (page, limit, filter) => {
       try {
-        const response = await fetch(`${URL}/products`);
+        const URL = filter
+          ? `${BASE_URL}/products?category=${filter}&_page=${page}&_limit=${limit}`
+          : `${BASE_URL}/products?&_page=${page}&_limit=${limit}`;
+
+        const response = await fetch(URL);
+        const totalCount = response.headers.get("x-total-count");
         const products = await response.json();
         dispatch({
           type: "fetchProducts",
           products,
+          totalCount,
         });
       } catch (err) {
         console.error(err);
@@ -16,7 +22,7 @@ export const createActions = (dispatch) => {
     deleteProduct: async (id) => {
       console.log("deleting");
       try {
-        const response = await fetch(`${URL}/products/${id}`, {
+        const response = await fetch(`${BASE_URL}/products/${id}`, {
           method: "DELETE",
         });
         if (response.ok) {
@@ -32,7 +38,7 @@ export const createActions = (dispatch) => {
     createProduct: async (product) => {
       console.log(product);
       try {
-        const response = await fetch(`${URL}/products`, {
+        const response = await fetch(`${BASE_URL}/products`, {
           headers: { "Content-Type": "application/json" },
           method: "POST",
           body: JSON.stringify(product),
@@ -49,7 +55,7 @@ export const createActions = (dispatch) => {
     },
     updateProduct: async (product) => {
       try {
-        const response = await fetch(`${URL}/products/${product.id}`, {
+        const response = await fetch(`${BASE_URL}/products/${product.id}`, {
           headers: { "Content-Type": "application/json" },
           method: "PUT",
           body: JSON.stringify(product),
