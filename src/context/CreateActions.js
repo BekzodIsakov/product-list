@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:2288";
+const BASE_URL = "https://my-json-server.typicode.com/BekzodIsakov/db-json";
 export const createActions = (dispatch) => {
   return {
     fetchProducts: async (page, limit, filter) => {

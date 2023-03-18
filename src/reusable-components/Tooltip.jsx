@@ -11,9 +11,6 @@ export const Tooltip = ({ handleCancel, handleDelete }) => {
     handleDelete();
   };
 
-  const afterElemStyle =
-    "after:block after:border-b-8 after:border-b-orange-600 after:bg-red-500 after:absolute after:left-[100%]";
-
   const arrowStyle =
     " after:absolute after:left-[90%] after:bottom-[100%] after:-translate-x-0.5 after:border-4 after:border-x-transparent after:border-t-transparent after:border-b-black/60";
 
