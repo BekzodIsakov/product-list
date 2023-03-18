@@ -3,6 +3,11 @@ export const createActions = (dispatch) => {
   return {
     fetchProducts: async (page, limit, filter) => {
       try {
+        dispatch({
+          type: "setLoading",
+          loading: true,
+        });
+
         const URL = filter
           ? `${BASE_URL}/products?category=${filter}&_page=${page}&_limit=${limit}`
           : `${BASE_URL}/products?&_page=${page}&_limit=${limit}`;
@@ -17,22 +22,11 @@ export const createActions = (dispatch) => {
         });
       } catch (err) {
         console.error(err);
-      }
-    },
-    deleteProduct: async (id) => {
-      console.log("deleting");
-      try {
-        const response = await fetch(`${BASE_URL}/products/${id}`, {
-          method: "DELETE",
+      } finally {
+        dispatch({
+          type: "setLoading",
+          loading: false,
         });
-        if (response.ok) {
-          dispatch({
-            type: "delete",
-            id,
-          });
-        }
-      } catch (err) {
-        console.error(err);
       }
     },
     createProduct: async (product) => {
@@ -64,6 +58,22 @@ export const createActions = (dispatch) => {
           dispatch({
             type: "edit",
             product,
+          });
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    },
+    deleteProduct: async (id) => {
+      console.log("deleting");
+      try {
+        const response = await fetch(`${BASE_URL}/products/${id}`, {
+          method: "DELETE",
+        });
+        if (response.ok) {
+          dispatch({
+            type: "delete",
+            id,
           });
         }
       } catch (err) {

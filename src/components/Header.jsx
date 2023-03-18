@@ -25,8 +25,16 @@ export const Header = () => {
         )}
       </AnimatePresence>
       <div>
-        <label htmlFor='search'>Search</label>
-        <input type='text' />
+        <label
+          htmlFor='categories'
+          className='mr-2 text-sm font-semibold text-indigo-300 cursor-pointer'
+        >
+          Search:
+        </label>
+        <input
+          type='text'
+          className='bg-gray-100 rounded p-1 text-sm text-gray-800 w-48'
+        />
       </div>
     </header>
   );

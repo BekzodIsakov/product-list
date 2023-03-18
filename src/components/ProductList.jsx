@@ -40,7 +40,7 @@ export const ProductList = () => {
         <div>
           <label
             htmlFor='categories'
-            className='mr-2 text-sm font-semibold text-indigo-300'
+            className='mr-2 text-sm font-semibold text-indigo-300 cursor-pointer'
           >
             Filter by category:
           </label>
@@ -59,6 +59,7 @@ export const ProductList = () => {
           </select>
         </div>
       </div>
+
       <ul className='grid grid-cols-auto-fit gap-x-6 gap-y-7 mb-5'>
         {productItems.map((item) => (
           <li key={item.id}>
@@ -74,7 +75,7 @@ export const ProductList = () => {
         pageRangeDisplayed={3}
         pageCount={pageCount}
         previousLabel='<'
-        containerClassName='flex justify-center gap-x-2 mt-14 mb-10 text-gray-400 '
+        containerClassName='flex justify-center gap-x-2 mt-12 mb-10 text-gray-400 '
         pageClassName='rounded'
         pageLinkClassName='px-2.5 py-1 rounded'
         previousLinkClassName='px-3 py-1 rounded select-none'

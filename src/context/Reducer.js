@@ -43,6 +43,12 @@ export const reducer = (state, action) => {
       };
     }
 
+    case "setLoading":
+      return {
+        ...state,
+        loading: action.loading,
+      };
+
     default:
       return state;
   }

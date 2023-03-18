@@ -7,6 +7,7 @@ export const Context = createContext();
 export const ContextProvider = ({ children }) => {
   const initialState = {
     products: [],
+    loading: false,
   };
   const [state, dispatch] = useReducer(reducer, initialState);
   const actions = createActions(dispatch);
