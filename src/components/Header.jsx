@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import { Context } from "../context/Provider";
-import { Button, Modal, Form } from "../reusable-components";
+import { Context } from "@context";
+import { Button, Modal, Form } from "@reusable-components";
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);

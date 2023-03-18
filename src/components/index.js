@@ -1,3 +1,2 @@
-import { ProductList } from "./ProductList";
-
+export { Header } from "./Header";
 export { ProductList } from "./ProductList";

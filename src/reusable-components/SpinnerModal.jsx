@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
-import { Spinner } from "./Spinner";
-import { Context } from "../context/Provider";
+
+import { Context } from "@context";
+import { Spinner } from "@reusable-components";
 
 const SpinnerModalContent = (
   <motion.div

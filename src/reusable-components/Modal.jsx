@@ -2,7 +2,7 @@ import React from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
-import { Icon } from "./Icon";
+import { Icon } from "@reusable-components/Icon";
 
 export const Modal = ({ children, handleOnClose }) => {
   const ModalContent = () => (

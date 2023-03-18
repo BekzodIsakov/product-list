@@ -16,7 +16,7 @@ export const createActions = (dispatch) => {
         const totalCount = response.headers.get("x-total-count");
         const products = await response.json();
         dispatch({
-          type: "fetchProducts",
+          type: "fetch",
           products,
           totalCount,
         });

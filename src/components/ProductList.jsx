@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-import { Context } from "../context/Provider";
-import { Card } from "../reusable-components/Card";
+import { Context } from "@context";
+import { Card } from "@reusable-components";
 
 export const ProductList = () => {
   const [state, actions] = useContext(Context);

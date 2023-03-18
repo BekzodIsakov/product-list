@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
-import { Context } from "../context/Provider";
-import { Button } from "./Button";
-import { Input } from "./Input";
-import { Spinner } from "./Spinner";
+import { Context } from "@context";
+
+import { Button, Input, Spinner } from "@reusable-components";
 
 const Label = ({ children, className = "", ...rest }) => (
   <label {...rest} className={`mb-1 inline-block text-zinc-600 ${className}`}>
@@ -11,7 +10,7 @@ const Label = ({ children, className = "", ...rest }) => (
 );
 
 export const Form = ({ product: initialProduct }) => {
-  const [state, actions] = useContext(Context);
+  const [_, actions] = useContext(Context);
   const [isLoading, setIsLoading] = useState(false);
 
   const [name, setName] = useState(initialProduct?.name ?? "");

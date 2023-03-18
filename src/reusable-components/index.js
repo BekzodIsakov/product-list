@@ -6,3 +6,4 @@ export { Input } from "./Input";
 export { Modal } from "./Modal";
 export { Spinner } from "./Spinner";
 export { Tooltip } from "./Tooltip";
+export { SpinnerModal } from "./SpinnerModal";
