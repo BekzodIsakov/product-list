@@ -22,20 +22,11 @@ export const ProductList = () => {
     }
   }
 
-  // console.log({ productItems });
-
   const ITEMS_PER_PAGE = 8;
-  // const endOffset = itemOffset + ITEMS_PER_PAGE;
-  // const currentItems = productItems.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(state.totalCount / ITEMS_PER_PAGE);
-  // console.log(productItems);
 
   const handlePageClick = (e) => {
-    // console.log({ selected: e.selected });
-    // const newOffset = (e.selected * ITEMS_PER_PAGE) % state.totalCount;
     setCurrentPage(e.selected + 1);
-
-    // setItemOffset(newOffset);
   };
 
   useEffect(() => {
@@ -49,7 +40,7 @@ export const ProductList = () => {
         <div>
           <label
             htmlFor='categories'
-            className='text-sm font-semibold text-indigo-300 mr-2'
+            className='mr-2 text-sm font-semibold text-indigo-300'
           >
             Filter by category:
           </label>
@@ -63,8 +54,8 @@ export const ProductList = () => {
             <option className='text-lg' value=''>
               None
             </option>
-            <option value='shoes'>shoes</option>
-            <option value='dress'>dress</option>
+            <option value='shoes'>Shoes</option>
+            <option value='dress'>Dress</option>
           </select>
         </div>
       </div>
@@ -80,14 +71,14 @@ export const ProductList = () => {
         breakLabel='...'
         nextLabel='>'
         onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={3}
         pageCount={pageCount}
         previousLabel='<'
-        containerClassName='flex justify-center mt-14 text-gray-400'
+        containerClassName='flex justify-center gap-x-2 mt-14 mb-10 text-gray-400 '
         pageClassName='rounded'
         pageLinkClassName='px-2.5 py-1 rounded'
-        previousLinkClassName='px-2.5 py-1 rounded select-none'
-        nextLinkClassName='px-2.5 py-1 rounded select-none'
+        previousLinkClassName='px-3 py-1 rounded select-none'
+        nextLinkClassName='px-3 py-1 rounded select-none'
         activeLinkClassName='bg-indigo-400 text-white'
         disabledLinkClassName='cursor-default text-gray-300'
       />
