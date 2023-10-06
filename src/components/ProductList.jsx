@@ -33,6 +33,10 @@ export const ProductList = () => {
     actions.fetchProducts(currentPage, ITEMS_PER_PAGE, filterBy);
   }, [filterBy, currentPage]);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filterBy]);
+
   return (
     <div className='my-2'>
       <div className='flex justify-between items-center mb-1'>
@@ -40,7 +44,7 @@ export const ProductList = () => {
         <div>
           <label
             htmlFor='categories'
-            className='mr-2 text-sm font-semibold text-indigo-300 cursor-pointer'
+            className='mr-2 text-sm font-semibold text-indigo-500 cursor-pointer'
           >
             Filter by category:
           </label>
@@ -52,7 +56,7 @@ export const ProductList = () => {
             onChange={(e) => setFilterBy(e.target.value)}
           >
             <option className='text-lg' value=''>
-              None
+              All
             </option>
             <option value='shoes'>Shoes</option>
             <option value='dress'>Dress</option>
@@ -69,12 +73,13 @@ export const ProductList = () => {
       </ul>
 
       <ReactPaginate
+        forcePage={currentPage - 1}
         breakLabel='...'
+        previousLabel='<'
         nextLabel='>'
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         pageCount={pageCount}
-        previousLabel='<'
         containerClassName='flex justify-center gap-x-2 mt-12 mb-10 text-gray-400 '
         pageClassName='rounded'
         pageLinkClassName='px-2.5 py-1 rounded'
