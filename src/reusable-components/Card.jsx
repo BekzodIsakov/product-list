@@ -19,7 +19,7 @@ export const Card = ({ product }) => {
       <div className='mb-2 relative'>
         <div className='tooltip-container absolute right-0 p-1'>
           <button
-            className='p-1 bg-slate-700/50 text-white rounded-sm mr-1'
+            className='p-1.5 bg-slate-700/50 text-white rounded-sm mr-1'
             title='edit'
             onClick={() => setShowEditModal(true)}
           >
@@ -33,7 +33,7 @@ export const Card = ({ product }) => {
             )}
           </AnimatePresence>
           <button
-            className='p-1 bg-slate-700/50 text-white rounded-sm'
+            className='p-1.5 bg-slate-700/50 text-white rounded-sm'
             title='delete'
             onClick={() => setShowDeleteModal(!showDeleteModal)}
           >

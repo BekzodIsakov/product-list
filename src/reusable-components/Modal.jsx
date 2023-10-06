@@ -21,7 +21,7 @@ export const Modal = ({ children, handleOnClose }) => {
       >
         <button
           onClick={handleOnClose}
-          className='absolute top-2 right-2 bg-gray-200 p-1 rounded-sm'
+          className='absolute top-2 right-2 bg-gray-200 p-1.5 rounded-sm'
         >
           <Icon name='x' />
         </button>
