@@ -1,4 +1,3 @@
-const BASE_URL = "https://my-json-server.typicode.com/BekzodIsakov/db-json";
 export const createActions = (dispatch) => {
   return {
     fetchProducts: async (page, limit, filter) => {
@@ -9,8 +8,8 @@ export const createActions = (dispatch) => {
         });
 
         const URL = filter
-          ? `${BASE_URL}/products?category=${filter}&_page=${page}&_limit=${limit}`
-          : `${BASE_URL}/products?&_page=${page}&_limit=${limit}`;
+          ? `${process.env.REACT_APP_BASE_URL}/products?category=${filter}&_page=${page}&_limit=${limit}`
+          : `${process.env.REACT_APP_BASE_URL}/products?&_page=${page}&_limit=${limit}`;
 
         const response = await fetch(URL);
         const totalCount = response.headers.get("x-total-count");
@@ -32,11 +31,14 @@ export const createActions = (dispatch) => {
     createProduct: async (product) => {
       console.log(product);
       try {
-        const response = await fetch(`${BASE_URL}/products`, {
-          headers: { "Content-Type": "application/json" },
-          method: "POST",
-          body: JSON.stringify(product),
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_BASE_URL}/products`,
+          {
+            headers: { "Content-Type": "application/json" },
+            method: "POST",
+            body: JSON.stringify(product),
+          }
+        );
         if (response.ok) {
           dispatch({
             type: "add",
@@ -49,11 +51,14 @@ export const createActions = (dispatch) => {
     },
     updateProduct: async (product) => {
       try {
-        const response = await fetch(`${BASE_URL}/products/${product.id}`, {
-          headers: { "Content-Type": "application/json" },
-          method: "PUT",
-          body: JSON.stringify(product),
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_BASE_URL}/products/${product.id}`,
+          {
+            headers: { "Content-Type": "application/json" },
+            method: "PUT",
+            body: JSON.stringify(product),
+          }
+        );
         if (response.ok) {
           dispatch({
             type: "edit",
@@ -67,9 +72,12 @@ export const createActions = (dispatch) => {
     deleteProduct: async (id) => {
       console.log("deleting");
       try {
-        const response = await fetch(`${BASE_URL}/products/${id}`, {
-          method: "DELETE",
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_BASE_URL}/products/${id}`,
+          {
+            method: "DELETE",
+          }
+        );
         if (response.ok) {
           dispatch({
             type: "delete",
