@@ -11,12 +11,12 @@
     },
     {
       "id": 2,
-      "name": "Radlee Skirt",
-      "type": "Floral A-line skirt",
-      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
+      "name": "Dress trim with tiers",
+      "type": "Modest midi dress",
+      "description": "Midi-length dresses are perfect for the transition between winter and spring, and this midi dress is one of our favorites. With an elastic waist in the back for comfort and a lovely tiered skirt, this dress is the perfect addition to your closet.",
       "price": 23.99,
       "category": "dress",
-      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1392722_P_Dress_Trim_with_Tiers_Green-468062.jpg"
     },
     {
       "id": 4,
@@ -65,12 +65,12 @@
     },
     {
       "id": 9,
-      "name": "Radlee Skirt",
-      "type": "Floral A-line skirt",
+      "name": "Adeline - dress mandarin collar tiered",
+      "type": "Modest midi dress",
       "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
       "price": 23.99,
       "category": "dress",
-      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
+      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/6/1410624_P_Dress_Smocked_Bodice_Tiered_Skirt_Purple-277939.jpg"
     },
     {
       "id": 10,
@@ -127,15 +127,6 @@
       "imageSrc": "https://nb.scene7.com/is/image/NB/m108012n_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
     },
     {
-      "id": 16,
-      "name": "Radlee Skirt",
-      "type": "Floral A-line skirt",
-      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
-      "price": 23.99,
-      "category": "dress",
-      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
-    },
-    {
       "id": 17,
       "name": "Made in USA 990v6",
       "description": "The designers of the first 990 were tasked with creating the single best running shoe on the market. The MADE in USA 990v6 embraces this original mandate, with a series of performance-inspired updates. The upper dispenses with the standard midfoot saddle, allowing the pigskin and synthetic overlays to flow from heel to toe across the mesh underlay, for a speedy, streamlined look.",
@@ -179,15 +170,6 @@
       "price": 159.99,
       "category": "shoes",
       "imageSrc": "https://nb.scene7.com/is/image/NB/m108012n_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
-    },
-    {
-      "id": 23,
-      "name": "Radlee Skirt",
-      "type": "Floral A-line skirt",
-      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
-      "price": 23.99,
-      "category": "dress",
-      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
     },
     {
       "id": 24,
@@ -242,15 +224,6 @@
       "price": 159.99,
       "category": "shoes",
       "imageSrc": "https://nb.scene7.com/is/image/NB/m108012n_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
-    },
-    {
-      "id": 30,
-      "name": "Radlee Skirt",
-      "type": "Floral A-line skirt",
-      "description": "Get some compliments. The Perry is slim fitting throughout with a lettuce hem at the sleeve opening and skirt hem. It's soft and stretchy for an extra comfortable feel.",
-      "price": 23.99,
-      "category": "dress",
-      "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1388930_P_Elastic_Waist_Ruffle_Skirt_White_Floral-167012.jpg"
     },
     {
       "id": 31,
