@@ -5,6 +5,14 @@ import { motion } from "framer-motion";
 import { Icon } from "@reusable-components/Icon";
 
 export const Modal = ({ children, handleOnClose }) => {
+  React.useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   const ModalContent = () => (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,7 +24,7 @@ export const Modal = ({ children, handleOnClose }) => {
       <motion.div
         initial={{ transform: "scale(0.8)" }}
         animate={{ transform: "scale(1)" }}
-        className={` bg-white rounded-md shadow-xl relative`}
+        className={`bg-white rounded-md shadow-xl relative max-h-[95vh] overflow-auto`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -25,7 +33,7 @@ export const Modal = ({ children, handleOnClose }) => {
         >
           <Icon name='x' />
         </button>
-        {children}
+        <div>{children}</div>
       </motion.div>
     </motion.div>
   );
