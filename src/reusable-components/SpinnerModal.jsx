@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
-import { Context } from "@context";
+import { useProductContext } from "@context";
 import { Spinner } from "@reusable-components";
 
 const SpinnerModalContent = (
@@ -17,6 +17,6 @@ const SpinnerModalContent = (
 );
 
 export const SpinnerModal = () => {
-  const [state] = useContext(Context);
+  const [state] = useProductContext();
   return state.loading && createPortal(SpinnerModalContent, document.body);
 };

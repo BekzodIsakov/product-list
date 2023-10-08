@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import { Context } from "@context";
+import { useProductContext } from "@context";
 import { Icon, Modal, Tooltip, Form } from "@reusable-components";
 
 export const Card = ({ product }) => {
-  const [state, actions] = useContext(Context);
+  const [state, actions] = useProductContext();
 
   // close modal after product editing
   useEffect(() => {

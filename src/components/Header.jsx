@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import { Context } from "@context";
+import { useProductContext } from "@context";
 import { Button, Modal, Form } from "@reusable-components";
 import Search from "./Search";
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const [state] = useContext(Context);
+  const [state] = useProductContext();
 
   // close modal after product creation
   useEffect(() => {

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { Context } from "@context";
+import React, { useState } from "react";
+import { useProductContext } from "@context";
 
 import { Button, Input, Spinner } from "@reusable-components";
 
@@ -10,7 +10,7 @@ const Label = ({ children, className = "", ...rest }) => (
 );
 
 export const Form = ({ product: initialProduct }) => {
-  const [_, actions] = useContext(Context);
+  const [_, actions] = useProductContext();
   const [isLoading, setIsLoading] = useState(false);
 
   const [name, setName] = useState(initialProduct?.name ?? "");

@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-import { Context } from "@context";
+import { useProductContext } from "@context";
 import { Card } from "@reusable-components";
 
 export const ProductList = () => {
-  const [state, actions] = useContext(Context);
+  const [state, actions] = useProductContext();
 
   const [filterBy, setFilterBy] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
