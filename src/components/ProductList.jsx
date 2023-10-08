@@ -30,7 +30,7 @@ export const ProductList = () => {
   };
 
   useEffect(() => {
-    actions.fetchProducts(currentPage, ITEMS_PER_PAGE, filterBy);
+    actions.fetch(currentPage, ITEMS_PER_PAGE, filterBy);
   }, [filterBy, currentPage]);
 
   useEffect(() => {

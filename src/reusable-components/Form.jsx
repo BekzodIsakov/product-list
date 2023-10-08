@@ -35,9 +35,7 @@ export const Form = ({ product: initialProduct }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    initialProduct
-      ? actions.updateProduct(product)
-      : actions.createProduct(product);
+    initialProduct ? actions.edit(product) : actions.create(product);
   };
 
   return (

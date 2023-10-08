@@ -4,11 +4,11 @@ import { reducer } from "./Reducer";
 
 export const Context = createContext();
 
-export const ContextProvider = ({ children }) => {
+export const ProductContextProvider = ({ children }) => {
   const initialState = {
     products: [],
-    foundProducts: [],
     loading: false,
+    error: null,
   };
   const [state, dispatch] = useReducer(reducer, initialState);
   const actions = createProductActions(dispatch);

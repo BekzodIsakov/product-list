@@ -1,88 +1,61 @@
-export const createActions = (dispatch) => {
+export const createProductActions = (dispatch) => {
   return {
-    fetchProducts: async (page, limit, filter) => {
+    fetch: async (page, limit, filter) => {
       try {
         dispatch({
-          type: "setLoading",
+          type: "loading",
           loading: true,
         });
 
-        const URL = filter
+        const url = filter
           ? `${process.env.REACT_APP_BASE_URL}/products?category=${filter}&_page=${page}&_limit=${limit}`
           : `${process.env.REACT_APP_BASE_URL}/products?&_page=${page}&_limit=${limit}`;
 
-        const response = await fetch(URL);
-        const totalCount = response.headers.get("x-total-count");
-        const products = await response.json();
+        const res = await fetch(url);
+        const totalCount = res.headers.get("x-total-count");
+        const products = await res.json();
         dispatch({
           type: "fetch",
           products,
           totalCount,
         });
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
+        dispatch({
+          type: "error",
+          error,
+        });
+        console.error(error);
       } finally {
         dispatch({
-          type: "setLoading",
+          type: "loading",
           loading: false,
         });
       }
     },
-    search: async (name) => {
+    create: async (product) => {
       try {
-        // dispatch({
-        //   type: "setLoading",
-        //   loading: true,
-        // });
-
-        const url = `${process.env.REACT_APP_BASE_URL}/products?name=${name}`;
-
-        const res = await fetch(url);
-        // const totalCount = res.headers.get("x-total-count");
-        const data = await res.json();
-        dispatch({
-          type: "search",
-          foundProducts: data,
+        const res = await fetch(`${process.env.REACT_APP_BASE_URL}/products`, {
+          headers: { "Content-Type": "application/json" },
+          method: "POST",
+          body: JSON.stringify(product),
         });
-      } catch (err) {
-        console.error(err);
-      }
-      // finally {
-      //   dispatch({
-      //     type: "setLoading",
-      //     loading: false,
-      //   });
-      // }
-    },
-    clearSearch: async () => {
-      dispatch({
-        type: "clearSearch",
-      });
-    },
-    createProduct: async (product) => {
-      console.log(product);
-      try {
-        const response = await fetch(
-          `${process.env.REACT_APP_BASE_URL}/products`,
-          {
-            headers: { "Content-Type": "application/json" },
-            method: "POST",
-            body: JSON.stringify(product),
-          }
-        );
-        if (response.ok) {
+        if (res.ok) {
           dispatch({
             type: "add",
             product,
           });
         }
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
+        dispatch({
+          type: "error",
+          error,
+        });
+        console.error(error);
       }
     },
-    updateProduct: async (product) => {
+    edit: async (product) => {
       try {
-        const response = await fetch(
+        const res = await fetch(
           `${process.env.REACT_APP_BASE_URL}/products/${product.id}`,
           {
             headers: { "Content-Type": "application/json" },
@@ -90,33 +63,40 @@ export const createActions = (dispatch) => {
             body: JSON.stringify(product),
           }
         );
-        if (response.ok) {
+        if (res.ok) {
           dispatch({
             type: "edit",
             product,
           });
         }
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
+        dispatch({
+          type: "error",
+          error,
+        });
+        console.error(error);
       }
     },
-    deleteProduct: async (id) => {
-      console.log("deleting");
+    delete: async (id) => {
       try {
-        const response = await fetch(
+        const res = await fetch(
           `${process.env.REACT_APP_BASE_URL}/products/${id}`,
           {
             method: "DELETE",
           }
         );
-        if (response.ok) {
+        if (res.ok) {
           dispatch({
             type: "delete",
             id,
           });
         }
-      } catch (err) {
-        console.error(err);
+      } catch (error) {
+        dispatch({
+          type: "error",
+          error,
+        });
+        console.error(error);
       }
     },
   };

@@ -42,7 +42,7 @@ export const Card = ({ product }) => {
           {showDeleteModal && (
             <Tooltip
               handleCancel={() => setShowDeleteModal(false)}
-              handleDelete={() => actions.deleteProduct(product.id)}
+              handleDelete={() => actions.delete(product.id)}
             />
           )}
         </div>
