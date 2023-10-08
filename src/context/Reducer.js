@@ -7,6 +7,20 @@ export const reducer = (state, action) => {
         products: [...action.products],
       };
     }
+    case "search": {
+      return {
+        ...state,
+        // totalCount: action.totalCount,
+        foundProducts: [...action.foundProducts],
+      };
+    }
+    case "clearSearch": {
+      return {
+        ...state,
+        // totalCount: action.totalCount,
+        foundProducts: [],
+      };
+    }
     case "add": {
       return {
         ...state,

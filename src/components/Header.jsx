@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 
 import { Context } from "@context";
 import { Button, Modal, Form } from "@reusable-components";
+import Search from "./Search";
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +17,11 @@ export const Header = () => {
 
   return (
     <header className='flex justify-between items-center mb-6 border-b pb-1.5'>
-      <Button onClick={() => setShowModal(true)}>Create</Button>
+      <Button onClick={() => setShowModal(true)} className='mr-3'>
+        Create
+      </Button>
+      <Search />
+
       <AnimatePresence>
         {showModal && (
           <Modal handleOnClose={() => setShowModal(false)}>
@@ -24,20 +29,6 @@ export const Header = () => {
           </Modal>
         )}
       </AnimatePresence>
-      <div>
-        <label
-          htmlFor='search'
-          className='mr-2 text-sm font-semibold text-indigo-500 cursor-pointer'
-        >
-          Search:
-        </label>
-        <input
-          name='search'
-          id='search'
-          type='text'
-          className='bg-gray-100 rounded p-1 text-sm text-gray-800 w-48'
-        />
-      </div>
     </header>
   );
 };

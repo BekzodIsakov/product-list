@@ -28,6 +28,37 @@ export const createActions = (dispatch) => {
         });
       }
     },
+    search: async (name) => {
+      try {
+        // dispatch({
+        //   type: "setLoading",
+        //   loading: true,
+        // });
+
+        const url = `${process.env.REACT_APP_BASE_URL}/products?name=${name}`;
+
+        const res = await fetch(url);
+        // const totalCount = res.headers.get("x-total-count");
+        const data = await res.json();
+        dispatch({
+          type: "search",
+          foundProducts: data,
+        });
+      } catch (err) {
+        console.error(err);
+      }
+      // finally {
+      //   dispatch({
+      //     type: "setLoading",
+      //     loading: false,
+      //   });
+      // }
+    },
+    clearSearch: async () => {
+      dispatch({
+        type: "clearSearch",
+      });
+    },
     createProduct: async (product) => {
       console.log(product);
       try {
