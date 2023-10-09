@@ -26,8 +26,7 @@
     "deploy": "gh-pages -d build",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject",
-    "server": "node server.js"
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
