@@ -27,7 +27,6 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "serve": "",
     "server": "node server.js"
   },
   "eslintConfig": {
