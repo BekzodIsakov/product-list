@@ -2,8 +2,8 @@ import React from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
-import { useProductContext } from "@context";
-import { Spinner } from "@reusable-components";
+import { useProductContext } from "../context";
+import { Spinner } from ".";
 
 const SpinnerModalContent = (
   <motion.div

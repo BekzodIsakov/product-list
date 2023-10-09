@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Spinner } from "@reusable-components";
+import { Spinner } from ".";
 
 export const Tooltip = ({ handleCancel, handleDelete }) => {
   const [isLoading, setIsLoading] = useState(false);

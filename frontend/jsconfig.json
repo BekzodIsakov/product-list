@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "frontend/src",
     "paths": {
       "@components": ["./components"],
       "@reusable-components": ["./reusable-components"],

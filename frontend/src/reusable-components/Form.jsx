@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useProductContext } from "@context";
+import { useProductContext } from "../context";
 
-import { Button, Input, Spinner } from "@reusable-components";
+import { Button, Input, Spinner } from ".";
 
 const Label = ({ children, className = "", ...rest }) => (
   <label {...rest} className={`mb-1 inline-block text-zinc-600 ${className}`}>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import { useProductContext } from "@context";
-import { Button, Modal, Form } from "@reusable-components";
+import { useProductContext } from "../context";
+import { Button, Modal, Form } from "../reusable-components";
 import Search from "./Search";
 
 export const Header = () => {

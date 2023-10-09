@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import { useProductContext } from "@context";
-import { Icon, Modal, Tooltip, Form } from "@reusable-components";
+import { useProductContext } from "../context";
+import { Icon, Modal, Tooltip, Form } from ".";
 
 export const Card = ({ product }) => {
   const [state, actions] = useProductContext();

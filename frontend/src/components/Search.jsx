@@ -1,6 +1,6 @@
-import { Button, Spinner } from "@reusable-components";
+import { Button, Spinner } from "../reusable-components";
 import React from "react";
-import { useProductContext } from "@context";
+import { useProductContext } from "../context";
 
 const Search = () => {
   const [name, setName] = React.useState("");
