@@ -6,7 +6,8 @@ This SPA has been bootstrapped with
 different categories which can be edited, deleted, created and filtered. The app
 also features pagination and a wildcard search.
 
-[Demo](https://bekzodisakov.github.io/product-list/)
+[App link](https://bekzodisakov.github.io/product-list/)
+[Video demo](https://youtu.be/lnrNaOMfSTA)
 
 ![App screenshot](/frontend/src/assets/screenshot.png "App screenshot")
 
