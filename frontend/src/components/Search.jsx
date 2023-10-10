@@ -1,4 +1,4 @@
-import { Button, Spinner } from "../reusable-components";
+import { Button, Spinner } from "@reusable-components";
 import React from "react";
 
 const Search = () => {

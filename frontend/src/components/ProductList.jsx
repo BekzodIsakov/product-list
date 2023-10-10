@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
+import { useProductContext } from "@context";
+import { Card } from "@reusable-components";
 
-import { useProductContext } from "../context";
-import { Card } from "../reusable-components";
-
-export const ProductList = () => {
+export const ProductList = ({ itemsPerPage }) => {
   const [state, actions] = useProductContext();
 
   const [filterBy, setFilterBy] = useState("");
@@ -22,15 +21,14 @@ export const ProductList = () => {
     }
   }
 
-  const ITEMS_PER_PAGE = 8;
-  const pageCount = Math.ceil(state.totalCount / ITEMS_PER_PAGE);
+  const pageCount = Math.ceil(state.totalCount / itemsPerPage);
 
   const handlePageClick = (e) => {
     setCurrentPage(e.selected + 1);
   };
 
   useEffect(() => {
-    actions.fetch(currentPage, ITEMS_PER_PAGE, filterBy);
+    actions.fetch(currentPage, itemsPerPage, filterBy);
   }, [filterBy, currentPage]);
 
   useEffect(() => {

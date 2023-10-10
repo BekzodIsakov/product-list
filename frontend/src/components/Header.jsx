@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-
-import { useProductContext } from "../context";
-import { Button, Modal, Form } from "../reusable-components";
+import { useProductContext } from "@context";
+import { Button, Modal, Form } from "@reusable-components";
 import Search from "./Search";
 
-export const Header = () => {
+export const Header = ({ itemsPerPage }) => {
   const [showModal, setShowModal] = useState(false);
 
   const [state] = useProductContext();
@@ -25,7 +24,7 @@ export const Header = () => {
       <AnimatePresence>
         {showModal && (
           <Modal handleOnClose={() => setShowModal(false)}>
-            <Form />
+            <Form itemsPerPage={itemsPerPage} />
           </Modal>
         )}
       </AnimatePresence>
