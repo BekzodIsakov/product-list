@@ -32,7 +32,7 @@ export const createProductActions = (dispatch) => {
         });
       }
     },
-    create: async (product) => {
+    create: async (product, productsCount, itemsPerPage) => {
       try {
         const res = await fetch(`${process.env.REACT_APP_BASE_URL}/products`, {
           headers: { "Content-Type": "application/json" },
@@ -40,10 +40,14 @@ export const createProductActions = (dispatch) => {
           body: JSON.stringify(product),
         });
         if (res.ok) {
-          dispatch({
-            type: "add",
-            product,
-          });
+          if (productsCount < itemsPerPage) {
+            dispatch({
+              type: "add",
+              product,
+            });
+          } else {
+            console.log("New product created!");
+          }
         }
       } catch (error) {
         dispatch({
@@ -51,6 +55,11 @@ export const createProductActions = (dispatch) => {
           error,
         });
         console.error(error);
+      } finally {
+        dispatch({
+          type: "loading",
+          loading: false,
+        });
       }
     },
     edit: async (product) => {

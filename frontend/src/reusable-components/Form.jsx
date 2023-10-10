@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useProductContext } from "../context";
-
-import { Button, Input, Spinner } from ".";
+import { useProductContext } from "@context";
+import { Button, Input, Spinner } from "@reusable-components";
 
 const Label = ({ children, className = "", ...rest }) => (
   <label {...rest} className={`mb-1 inline-block text-zinc-600 ${className}`}>
@@ -9,9 +8,11 @@ const Label = ({ children, className = "", ...rest }) => (
   </label>
 );
 
-export const Form = ({ product: initialProduct }) => {
-  const [_, actions] = useProductContext();
+export const Form = ({ product: initialProduct, itemsPerPage }) => {
+  const [state, actions] = useProductContext();
   const [isLoading, setIsLoading] = useState(false);
+
+  console.log({ state });
 
   const [name, setName] = useState(initialProduct?.name ?? "");
   const [type, setType] = useState(initialProduct?.type ?? "");
@@ -35,7 +36,9 @@ export const Form = ({ product: initialProduct }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    initialProduct ? actions.edit(product) : actions.create(product);
+    initialProduct
+      ? actions.edit(product)
+      : actions.create(product, state.products.length, itemsPerPage);
   };
 
   return (

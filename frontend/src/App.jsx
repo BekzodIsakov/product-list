@@ -1,8 +1,9 @@
 import { AnimatePresence } from "framer-motion";
 
-import { ProductList } from "./components";
-import { Header } from "./components/Header";
-import { SpinnerModal } from "./reusable-components/SpinnerModal";
+import { ProductList, Header } from "@components";
+import { SpinnerModal } from "@reusable-components/SpinnerModal";
+
+const ITEMS_PER_PAGE = 8;
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
         <SpinnerModal />
       </AnimatePresence>
       <div className='max-w-5xl mx-auto my-4 px-4'>
-        <Header />
-        <ProductList />
+        <Header itemsPerPage={ITEMS_PER_PAGE} />
+        <ProductList itemsPerPage={ITEMS_PER_PAGE} />
       </div>
     </div>
   );
