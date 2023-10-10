@@ -4,7 +4,7 @@ This SPA has been bootstrapped with
 [CRA](https://github.com/facebook/create-react-app) and styled with
 [Tailwind CSS](https://tailwindcss.com/). It contains a list of products of
 different categories which can be edited, deleted, created and filtered. The app
-also features pagination.
+also features pagination and a wildcard search.
 
 [Demo](https://bekzodisakov.github.io/product-list/)
 
