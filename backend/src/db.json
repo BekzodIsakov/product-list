@@ -260,24 +260,6 @@
       "price": 56.99,
       "category": "dress",
       "imageSrc": "https://www.sweetsaltclothing.com/mm5/graphics/00000001/5/1383812_P%20Raglan_Puff_Short_Slv_Dress_Green-166296.jpg"
-    },
-    {
-      "id": 1696927534374,
-      "name": "Ben",
-      "type": "running shoes",
-      "price": "1",
-      "category": "shoes",
-      "description": "",
-      "imageSrc": ""
-    },
-    {
-      "id": 1696927548554,
-      "name": "Ben",
-      "type": "running shoes",
-      "price": "2",
-      "category": "shoes",
-      "description": "",
-      "imageSrc": ""
     }
   ]
 }
