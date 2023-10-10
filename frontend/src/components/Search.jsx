@@ -1,6 +1,5 @@
 import { Button, Spinner } from "../reusable-components";
 import React from "react";
-import { useProductContext } from "../context";
 
 const Search = () => {
   const [name, setName] = React.useState("");
@@ -76,7 +75,7 @@ const Search = () => {
           <div className='absolute inset-y-0 right-0 mr-2 flex items-center'>
             {isLoading ? (
               <Spinner />
-            ) : (
+            ) : name.length > 2 ? (
               <button onClick={clearInput} type='button'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -93,7 +92,7 @@ const Search = () => {
                   />
                 </svg>
               </button>
-            )}
+            ) : null}
           </div>
         </div>
         <Button type='submit' className='px-2.5'>
